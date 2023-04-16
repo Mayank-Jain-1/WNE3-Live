@@ -6,6 +6,7 @@ import AIprompt from './components/AIprompt'
 
 function App() {
   
+  console.log(import.meta.env.VITE_APP_HUGGING_FACE_API_KEY)
 
   return (
     <div className="App">

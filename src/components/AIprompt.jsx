@@ -4,13 +4,15 @@ import './aiprompt.css'
 import { Buffer } from 'buffer';
 import axios from 'axios';
 const AIprompt = () => {
-
+  
   const [description, setDescription] = useState("")
   const [image, setImage] = useState(null)
   const [url, setURL] = useState(null)
 
   const [message, setMessage] = useState("")
   const [isWaiting, setIsWaiting] = useState(false)
+
+  console.log(import.meta.env.VITE_APP_HUGGING_FACE_API_KEY)
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -40,7 +42,7 @@ const AIprompt = () => {
       url: URL,
       method: 'POST',
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer ${import.meta.env.VITE_APP_HUGGING_FACE_API_KEY}`,
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
