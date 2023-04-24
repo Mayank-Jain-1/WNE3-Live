@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect , } from 'react';
 import React from 'react'
 import './aiprompt.css'
+import shirtimg from '../assets/men-black-plain-t-shirt-500x500.jpg'
+import arrowrt from '../assets/icons8-right-arrow-50.png'
 import { Buffer } from 'buffer';
 import axios from 'axios';
 const AIprompt = () => {
-  
   const [description, setDescription] = useState("")
   const [image, setImage] = useState(null)
-  const [url, setURL] = useState(null)
-
   const [message, setMessage] = useState("")
   const [isWaiting, setIsWaiting] = useState(false)
 
-  console.log(import.meta.env.VITE_APP_HUGGING_FACE_API_KEY)
+  const handleClick = () => {
+    const data = "data passed";
+    callback(data);
+    console.log(data)
+  }
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -29,13 +32,15 @@ const AIprompt = () => {
     
     setIsWaiting(false)
     setMessage("")
+
+    handleClick()
   }
 
   const createImage = async () => {
     setMessage("Generating Image...")
 
     // You can replace this with different model API's
-    const URL = `https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2`
+    const URL = `https://api-inference.huggingface.co/models/prompthero/openjourney-v4`
     
     // Send the request
     const response = await axios({
@@ -63,24 +68,24 @@ const AIprompt = () => {
   }
 
   return (
-    <div>
+    <div className='aiprompt'>
       <h1>Type something cool....</h1>
-
       <form onSubmit={submitHandler}>
-         
           <input className='input1' type="text" placeholder="Create a description..." onChange={(e) => setDescription(e.target.value)} />
-          <input className='input2' type="submit" value="Generate" />
+          <input className='input2' type="submit" value="Generate"  />
         </form>
-
         <div className="image">
           {!isWaiting && image ? (
-            <div className="div">
-            <img width={400} height={400} src={image} alt="AI generated image" />
-            <button>Proceed</button>
+            <><div className="div">
+            <img className="back" src={shirtimg} alt="" />
+            <div className="ai_image">
+              <img width={200} height={200} src={image} alt="AI generated image" />
             </div>
+          </div><div>
+             <a href="/prompt/checkout"><button>Checkout → </button></a> 
+            </div></>
           ) : isWaiting ? (
             <div className="image__placeholder">
-              
               <p>{message}</p>
             </div>
           ) : (

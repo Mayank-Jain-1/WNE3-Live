@@ -8,13 +8,13 @@
 }
 
 .sideSection{
-    width:45%;
+    width:49%;
     position: relative;
 }
 
 .mainSection{
     background:black;
-    width:55%;
+    width:51%;
     margin:40px;
     text-align:left;
     padding-left:30px;
@@ -38,31 +38,50 @@
   }
   .textContainer h1{
     font-family: 'Manrope', sans-serif;
-    font-size: 60px;
-    margin-top: 150px;
+    font-size: 70px;
+    margin-top: 120px;
+    letter-spacing:-2%;
   }
 
-.mainSection button{
+.btn-1{
     outline:none;
     border:none;
-    border-radius:5px;
+    border-radius:20px;
     background: linear-gradient(to left, #33ccff 0%, #0066ff 100%);
     color:black;
-    font-size:20px;
+    font-size:17px;
     font-weight:medium;
-    margin-top:60px;
-    padding:5px 20px;
+    margin-top:40px;
+    padding:5px 30px;
     transition: .2s ease-in-out;
 }
 
-.mainSection button:hover{
-    background:white
+.btn-1:hover{
+    color:white;
 }
 .socials{
-    margin-top:90px;
+    margin-top:70px;
     padding-top:20px;
 }
 
 .socials a{
     margin-right:50px;
+}
+
+.btn-2{
+    color:white;
+ background-color:black;
+ border:.5px solid white;
+ outline:none;
+ margin-left:30px;
+ padding:5px 40px;
+ font-size:17px;
+font-weight:medium;
+border-radius:20px;
+transition: .2s ease-in-out;
+}
+
+.btn-2:hover{
+    background-color:white;
+    color:black;
 }
