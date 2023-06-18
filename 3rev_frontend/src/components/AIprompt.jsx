@@ -2,20 +2,20 @@ import { useState, useEffect , } from 'react';
 import React from 'react'
 import './aiprompt.css'
 import shirtimg from '../assets/men-black-plain-t-shirt-500x500.jpg'
-import arrowrt from '../assets/icons8-right-arrow-50.png'
+
 import { Buffer } from 'buffer';
 import axios from 'axios';
-const AIprompt = () => {
+const AIprompt = (props) => {
   const [description, setDescription] = useState("")
   const [image, setImage] = useState(null)
   const [message, setMessage] = useState("")
   const [isWaiting, setIsWaiting] = useState(false)
 
   const handleClick = () => {
-    const data = "data passed";
-    callback(data);
-    console.log(data)
-  }
+    
+    props.onImageChange("https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/09/f956de51bf9bc6123a8b2f4120fd8566aa9f295f_w1152_h0_fS.png?fit=1152%2C1152&ssl=1")
+ }
+
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -33,7 +33,7 @@ const AIprompt = () => {
     setIsWaiting(false)
     setMessage("")
 
-    handleClick()
+   
   }
 
   const createImage = async () => {
@@ -63,30 +63,41 @@ const AIprompt = () => {
     const base64data = Buffer.from(data).toString('base64')
     const img = `data:${type};base64,` + base64data // <-- This is so we can render it on the page
     setImage(img)
+    localStorage.setItem('image' , JSON.stringify(img))
+
+  
+
+  
 
     return data
   }
 
+ 
+
+  
+
   return (
     <div className='aiprompt'>
-      <h1>Type something cool....</h1>
+      <h1>Create anything with prompts</h1>
       <form onSubmit={submitHandler}>
           <input className='input1' type="text" placeholder="Create a description..." onChange={(e) => setDescription(e.target.value)} />
           <input className='input2' type="submit" value="Generate"  />
         </form>
         <div className="image">
           {!isWaiting && image ? (
+            
             <><div className="div">
             <img className="back" src={shirtimg} alt="" />
             <div className="ai_image">
               <img width={200} height={200} src={image} alt="AI generated image" />
             </div>
-          </div><div>
-             <a href="/prompt/checkout"><button>Checkout → </button></a> 
+          </div>
+          <div>
+             <a href="/prompt/checkout"><button onClick={handleClick}>Proceed to</button></a> 
             </div></>
           ) : isWaiting ? (
             <div className="image__placeholder">
-              <p>{message}</p>
+              <div className="lds-ripple"><div></div><div></div></div>
             </div>
           ) : (
             <></>
