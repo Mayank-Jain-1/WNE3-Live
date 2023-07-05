@@ -78,10 +78,13 @@ const AIprompt = (props) => {
 
   return (
     <div className='aiprompt'>
-      <h1>Create anything with prompts</h1>
-      <form onSubmit={submitHandler}>
-          <input className='input1' type="text" placeholder="Create a description..." onChange={(e) => setDescription(e.target.value)} />
+      <h1>Customise your merchandise</h1>
+      <form onSubmit={submitHandler} >
+        <div className='input_field'>
+        <input className='input1' type="text" placeholder="Create a description..." onChange={(e) => setDescription(e.target.value)} />
           <input className='input2' type="submit" value="Generate"  />
+        </div>
+          
         </form>
         <div className="image">
           {!isWaiting && image ? (
@@ -93,7 +96,7 @@ const AIprompt = (props) => {
             </div>
           </div>
           <div>
-             <a href="/prompt/checkout"><button onClick={handleClick}>Proceed to</button></a> 
+             <a href="/prompt/checkout"><button onClick={handleClick}>Proceed to checkout</button></a> 
             </div></>
           ) : isWaiting ? (
             <div className="image__placeholder">

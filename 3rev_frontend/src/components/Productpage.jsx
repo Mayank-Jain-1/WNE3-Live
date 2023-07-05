@@ -29,7 +29,7 @@ const Productpage = (props) => {
          <h2>₹799</h2>
          <h5>-10% discount</h5>
          <div className="buy-btn">
-         <a href={import.meta.env.VITE_APP_GFORM_URL} target='_blank'><button onClick={datalog}>Buy Now</button></a>
+         <a href='/address' ><button onClick={datalog}>Buy Now</button></a>
          </div>
       </div>
       </div>

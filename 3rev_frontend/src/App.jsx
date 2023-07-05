@@ -6,6 +6,7 @@ import AIprompt from './components/AIprompt'
 import Productpage from './components/Productpage'
 import Betapage from './components/Betapage'
 import Login from './components/Login'
+import Address from './components/Address'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
      <Route path="/prompt/checkout" element={<Productpage aimage={aimage}/>}></Route>
      <Route path="/betapage" element={<Betapage/>}></Route>
      <Route path="/login" element={<Login/>}></Route>
+     <Route path="/address" element={<Address/>}></Route>
      </Routes>
     </div>
   )
