@@ -78,7 +78,7 @@ const AIprompt = (props) => {
 
   return (
     <div className='aiprompt'>
-      <h1>Customise your merchandise</h1>
+      <h1>Create anything with prompts </h1>
       <form onSubmit={submitHandler} >
         <div className='input_field'>
         <input className='input1' type="text" placeholder="Create a description..." onChange={(e) => setDescription(e.target.value)} />

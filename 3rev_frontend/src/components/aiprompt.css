@@ -1,14 +1,14 @@
 .aiprompt{
-    margin-top:10px;
-    height:100vh;
+  margin-top:10px;
+  height:100vh;
 }
 
-h1{ 
+.aiprompt h1{ 
  margin-top:10px;
  margin-bottom:20px;
  font-family: 'Manrope', sans-serif;
- font-size:35px;
-
+ font-size:45px;
+ 
 }
 
 .aiprompt form{
@@ -17,57 +17,58 @@ h1{
     
 }
 .input_field{
-  margin-top:30px;
+  margin-top:10px;
   border:1px solid gray; 
   border-radius:30px;
   background-color:#262626;
 }
 
 .input1{
-    color:white;
-    outline:none;
-    border:none;
-    width:700px;
-    background-color:transparent;
-    border-radius:20px;
-    padding:10px 10px;
-    font-size:17px;
-    margin:10px 5px;
+  color:white;
+  outline:none;
+  border:none;
+  width:700px;
+  background-color:transparent;
+  border-radius:20px;
+  padding:5px 15px;
+  font-size:17px;
+  margin:10px 5px;
 }
 
 .input2{
-    color:white;
-    outline:none;
-    border:none;
-    width:150px;
-    font-size:15px;
-    margin:10px;
-    padding:10px 0px;
-    background:#fc03df;
-    border-radius:20px;
+  color:white;
+  outline:none;
+  border:none;
+  width:150px;
+  font-size:15px;
+  font-weight:bold;
+  margin:10px;
+  padding:5px 0px;
+  background:#fc03df;
+  border-radius:20px;
 }
 
 .image{
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items:center;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
 }
 .div{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:450px;
-    width:500px;
-    margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:450px;
+  width:500px;
+  margin:0;
 
 }
 
 .back {
-    position:relative;
-    width:400px;
-    object-fit:cover;
-    border-radius:10px;
+  position:relative;
+  width:400px;
+  object-fit:cover;
+  border-radius:10px;
 }
 .ai_image{
     position:absolute;
@@ -81,14 +82,14 @@ h1{
 
 
 .image button{
-    background:#fc03df;
-    color:white;
-    font-weight:bold;
-    padding:10px 130px;
-    margin-top:20px;
-    outline:none;
-    border:none;
-    border-radius:10px;
+  background:#fc03df;
+  color:white;
+  font-weight:bold;
+  padding:10px 130px;
+  margin-top:20px;
+  outline:none;
+  border:none;
+  border-radius:10px;
    
 }
 

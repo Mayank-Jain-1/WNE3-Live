@@ -1,0 +1,72 @@
+.address_container{
+    height:80vh;
+    margin:30px 60px;
+    padding:10px;
+    text-align:left;
+}
+
+.address_container form{
+    display:flex;
+    justify-content:flex-start;
+    width:60%;
+}
+
+
+.address textarea{
+ width:95%;
+ resize:none;
+ border-radius:5px;
+}
+.form{
+    width:100%;
+}
+
+.names{
+    display:flex;
+    margin-bottom:10px;
+    justify-content:space-between;
+    width:100%;
+}
+
+.info_1{
+    display:flex;
+    margin-bottom:10px;
+    justify-content:space-between;
+}
+.info_2{
+    display:flex;
+    margin-bottom:10px;
+    justify-content:space-between;
+}
+
+.form{
+    margin:10px;
+}
+
+.form p{
+    margin-bottom:10px;
+}
+
+.inputs{
+    border:1px solid gray;
+    padding:10px;
+    color:white;
+    border-radius:5px;
+    width:90%;
+}
+
+.sw{
+    width:49%;
+}
+.form button{
+    margin-top:20px;
+    width:150px;
+    padding:5px 15px;
+    background:#fc03df;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:bold;
+    border-radius:5px;
+    font-weight:bold;
+}

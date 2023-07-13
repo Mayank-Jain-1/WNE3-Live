@@ -17,8 +17,8 @@ const Home = () => {
             <p>3REV</p>
             <h1>Open marketplace for all powered by AI </h1>
         </div>
-        <a href="/betapage"><button className='btn-1'>Join Beta</button></a>
-        <a href='/prompt'><button className='btn-2'>Login</button></a>
+        
+        <a href='/prompt'><button className='btn-2'>Try Demo</button></a>
         <div className="socials">
             <a href=""><img src={instagram} alt="" width={25} height={25}/></a>
             <a href=""><img src={linkedin} alt="" width={25} height={25}/></a>
