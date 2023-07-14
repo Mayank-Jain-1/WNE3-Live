@@ -1,89 +1,168 @@
-
-.Maincontainer h1{
- font-size:40px;
- text-align:left;
- margin-left:80px;
- max-height:100vh;
-}
-
-.Maincontainer{
-    margin:40px 50px;
-}
-
-
-.productinfo{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    
-}
-
-.Imagecontainer{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-right:30px;
-    width:500px;
-    height:500px;
-}
-
-.Imagecontainer img{
-    width:100%;
-    border-radius:10px;
-    position:relative;
-}
-
-.Infocontainer{
-    margin-left:30px;
-    margin-right:30px;
-    text-align:left;
-    margin-bottom:100px;
-    padding-bottom :50px;
-}
-
-.Infocontainer h1{
-    margin-left:0;
-    font-size:30px;
-    margin-bottom:10px;
-}
-.Infocontainer button{
-    
-    background-color:#5e36ff;
-    border:none;
-    border-radius:5px;
-    padding:7px 150px;
-    font-weight:bold;
-}
-.Infocontainer h5{
-    color:#39ff36;
-}
-
-.Infocontainer p{
-    color:grey;
-    margin-top:0;
-    margin-bottom:10px;
-}
-
-.Infocontainer span{
-    color:#d9d9d9;
-}
-
-.Infocontainer h2{
-    font-size:25px;
-}
-
-.Infocontainer button:hover{
-    cursor:pointer;
-}
-
-.buy-btn{
-    text-align:center;
-}
-
-.aimage{
-    
-    position:absolute;
-    width:200px;
-    top:50;
-   
-}
+.Maincontainer {
+    margin: 40px 50px;
+  }
+  
+  .Maincontainer h1 {
+    font-size: 40px;
+    text-align: left;
+    margin-left: 80px;
+    max-height: 100vh;
+  }
+  
+  .productinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Imagecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+  }
+  
+  .Imagecontainer img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .aimage {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .Infocontainer {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: left;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+  }
+  
+  .Infocontainer h1 {
+    margin-left: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .Infocontainer button {
+    background-color: #5e36ff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 30px;
+    font-weight: bold;
+  }
+  
+  .Infocontainer h5 {
+    color: #39ff36;
+  }
+  
+  .Infocontainer p {
+    color: grey;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .Infocontainer span {
+    color: #d9d9d9;
+  }
+  
+  .Infocontainer h2 {
+    font-size: 25px;
+  }
+  
+  .Infocontainer button:hover {
+    cursor: pointer;
+  }
+  
+  .buy-btn {
+    text-align: center;
+  }
+  
+  /* Responsive CSS */
+  
+  @media screen and (max-width: 768px) {
+    .Maincontainer h1 {
+      font-size: 32px;
+      margin-left: 20px;
+    }
+  
+    .Imagecontainer {
+      margin-right: 20px;
+    }
+  
+    .Infocontainer {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .Infocontainer button {
+      padding: 7px 20px;
+    }
+  
+    .aimage {
+      width: 100px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .Maincontainer {
+      margin: 20px;
+    }
+  
+    .Maincontainer h1 {
+      font-size: 28px;
+      margin-left: 10px;
+    }
+  
+    .productinfo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .Imagecontainer {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  
+    .Infocontainer {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+    }
+  
+    .Infocontainer h1 {
+      font-size: 24px;
+    }
+  
+    .Infocontainer button {
+      padding: 7px 15px;
+    }
+  
+    .aimage {
+      width: 80px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  

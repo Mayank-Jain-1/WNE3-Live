@@ -1,0 +1,86 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.div h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.formtest {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.formtest input[type="text"] {
+  width: 80%;
+  color:white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #3b3b3b;
+}
+
+.formtest button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.formtest button[type="submit"]:hover {
+  background-color: #ff1493;
+}
+
+@media screen and (max-width: 768px) {
+  .div h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .formtest input[type="text"] {
+    padding: 8px;
+  }
+
+  .formtest button[type="submit"] {
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .div {
+    padding: 20px;
+  }
+
+  .div h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .formtest input[type="text"] {
+    padding: 6px;
+  }
+
+  .formtest button[type="submit"] {
+    padding: 6px 12px;
+  }
+}

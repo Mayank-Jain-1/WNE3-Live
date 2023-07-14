@@ -5,7 +5,12 @@ import linkedin from '../assets/icons8-linkedin-circled-48.png'
 import instagram from '../assets/icons8-instagram-48.png'
 import twitter from '../assets/icons8-twitter-48.png'
 import discord from '../assets/icons8-discord-48.png'
+import {useNavigate} from 'react-router-dom'
+
 const Home = () => {
+
+ const navigate = useNavigate();
+
   return (
     <div className='mainContainer'>
       <div className="sideSection">
@@ -14,11 +19,11 @@ const Home = () => {
       </div>
       <div className="mainSection">
         <div className="textContainer">
-            <p>3REV</p>
+            <p>WNE3 Live</p>
             <h1>Open marketplace for all powered by AI </h1>
         </div>
         
-        <a href='/prompt'><button className='btn-2'>Try Demo</button></a>
+        <a ><button className='btn-2' onClick={()=>{navigate('./test')}} >Try Demo</button></a>
         <div className="socials">
             <a href=""><img src={instagram} alt="" width={25} height={25}/></a>
             <a href=""><img src={linkedin} alt="" width={25} height={25}/></a>

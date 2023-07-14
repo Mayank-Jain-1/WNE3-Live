@@ -1,8 +1,9 @@
 import { useState, useEffect , } from 'react';
 import React from 'react'
 import './aiprompt.css'
+import useImageStore from './imagestore';
 import shirtimg from '../assets/men-black-plain-t-shirt-500x500.jpg'
-
+import { useNavigate } from "react-router-dom";
 import { Buffer } from 'buffer';
 import axios from 'axios';
 const AIprompt = (props) => {
@@ -11,10 +12,14 @@ const AIprompt = (props) => {
   const [message, setMessage] = useState("")
   const [isWaiting, setIsWaiting] = useState(false)
 
+  
+
   const handleClick = () => {
     
     props.onImageChange("https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/09/f956de51bf9bc6123a8b2f4120fd8566aa9f295f_w1152_h0_fS.png?fit=1152%2C1152&ssl=1")
  }
+
+
 
 
   const submitHandler = async (e) => {
@@ -42,6 +47,7 @@ const AIprompt = (props) => {
     // You can replace this with different model API's
     const URL = `https://api-inference.huggingface.co/models/prompthero/openjourney-v4`
     
+    
     // Send the request
     const response = await axios({
       url: URL,
@@ -63,17 +69,16 @@ const AIprompt = (props) => {
     const base64data = Buffer.from(data).toString('base64')
     const img = `data:${type};base64,` + base64data // <-- This is so we can render it on the page
     setImage(img)
-    localStorage.setItem('image' , JSON.stringify(img))
+    
 
+   
+   
   
-
   
-
     return data
   }
 
  
-
   
 
   return (
