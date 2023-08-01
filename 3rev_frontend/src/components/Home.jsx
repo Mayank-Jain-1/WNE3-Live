@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import bgimage from "../assets/grid_0.webp";
 import linkedin from "../assets/icons8-linkedin-circled-48.png";
 import instagram from "../assets/icons8-instagram-48.png";
