@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PromptCard from "./prompts/PromptCard";
 
 const AIprompt = () => {
@@ -11,7 +11,41 @@ const AIprompt = () => {
 		"Full sleeve": false,
 	});
 
+	// const navigate = useNavigate()
+	const [loading, setLoading] = useState(false)
 	const [prompt, setPrompt] = useState("");
+	const [imageURL, setImageURL] = useState('')
+
+	const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // Set loading state to true
+
+    const data = { inputs: prompt };
+    const response = await query(data);
+    const imageUrl = URL.createObjectURL(response);
+    setImageURL(imageUrl);
+    console.log(imageUrl);
+
+    // navigate('/checkout', { state: { imageURL: imageUrl } });
+    setLoading(false); // Set loading state to false after image is loaded
+  };
+
+  const query = async (data) => {
+    const response = await fetch(
+      'https://api-inference.huggingface.co/models/prompthero/openjourney',
+      {
+        headers: { Authorization: 'Bearer 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' },
+        method: 'POST',
+        body: JSON.stringify(data),
+      }
+    );
+    const result = await response.blob();
+		console.log(result)
+    return result;
+  };
+
+
+
 
 	return (
 		<div className="bg-[#151515] min-h-screen w-full">
@@ -37,7 +71,9 @@ const AIprompt = () => {
 						value={prompt}
 						onChange={(e) => setPrompt(e.target.value)}
 					/>
-					<button className="w-40 bg-gradient-to-r from-[#5E81FF] to-[#00D1FF] h-full rounded-[20px] text-sm">
+					<button
+					onClick={handleSubmit}
+					className="w-40 bg-gradient-to-r from-[#5E81FF] to-[#00D1FF] h-full rounded-[20px] text-sm">
 						GENERATE
 					</button>
 				</div>
@@ -68,49 +104,49 @@ const AIprompt = () => {
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 my-16">
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
 					<PromptCard
 						bgImage={"/images/hoodie.png"}
-						image={""}
+						image={imageURL}
 						title={"Hoodies - Black XL"}
 						price={799}
 					/>
