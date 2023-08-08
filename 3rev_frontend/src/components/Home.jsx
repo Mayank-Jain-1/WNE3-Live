@@ -54,7 +54,7 @@ const Home = () => {
 						<button
 							className="font-Manrope text-white border border-white  text-lg xl:text-2xl font-semibold outline-none w-4/5 md:w-36 xl:w-52 max-w-[350px] h-11 text-center rounded-[30px]"
 							onClick={() => {
-								navigate("./test");
+								navigate("./prompt");
 							}}
 						>
 							Try Demo
@@ -85,7 +85,7 @@ const Home = () => {
 			<img
 				src={bgimage}
 				alt=""
-				className="fixed shrink-0 -z-10 top-0 left-0 w-full h-screen object-cover md:static md:w-5/12 xl:w-[48%] md:z-10 contrast-[50%] md:contrast-100"
+				className="fixed shrink-0 -z-10 top-0 left-0 w-full min-h-screen h-full object-cover md:static md:w-5/12 xl:w-[48%] md:z-10 contrast-[50%] md:contrast-100"
 			/>
 		</div>
 	);
